@@ -8,7 +8,7 @@
 import { reactive, toRefs, defineComponent, ref, onMounted } from "vue"
 import sipnLoading from "../components/spinLoading/spin.vue"
 export default defineComponent({
-  name: "loading",
+  name: "myLoading",
   components: {
     sipnLoading,
   },

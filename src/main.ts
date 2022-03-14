@@ -3,10 +3,6 @@ import { createRouter, createWebHashHistory } from "vue-router"
 
 import App from "./App.vue"
 
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
-
-
 
 const router = createRouter({
   // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
@@ -17,10 +13,6 @@ const router = createRouter({
       component: () => import('./pages/index.vue'),
     },
     {
-      path: "/todoList",
-      component: () => import('./pages/todoListPage.vue')
-    },
-    {
       path: "/loading",
       component: () => import("./pages/loadingPage.vue")
     },
@@ -28,7 +20,7 @@ const router = createRouter({
       path: "/sorttag",
       component: () => import("./pages/sortTagPage.vue")
     },
-    
+
     {
       path: "/number",
       component: () => import("./pages/animationNumberPage.vue")
@@ -42,4 +34,4 @@ const router = createRouter({
 
 const app = createApp(App);
 
-app.use(router).use(Antd).mount('#app')
+app.use(router).mount('#app')

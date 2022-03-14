@@ -19,7 +19,7 @@
 
 <script lang="ts">
 export default {
-  name: "spin",
+  name: "mySpin",
   components: {},
   props: {
     iClass: {

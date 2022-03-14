@@ -3,44 +3,42 @@
     <header>点击跳转对应组件</header>
 
     <div class="links">
-      <a-button type="primary" @click="gotoNewVue3">Vue-ToDoList</a-button>
-      <a-button type="primary" @click="goToloadingn">Loading</a-button>
-      <a-button type="primary" @click="gotoSortTag">SortTag</a-button>
-      <a-button type="primary" @click="gotoNumber"
-        >animationNumberPage</a-button
-      >
-      <a-button type="primary" @click="gotoPullList">pullListPage</a-button>
+      <!-- <button @click="gotoNewVue3">Vue-ToDoList</button> -->
+      <button @click="goToloadingn">Loading</button>
+      <button @click="gotoSortTag">SortTag</button>
+      <button @click="gotoNumber">animationNumberPage</button>
+      <button @click="gotoPullList">pullListPage</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { useRouter } from "vue-router"
-import { reactive, toRefs, defineComponent } from "vue"
+import { useRouter } from "vue-router";
+import { reactive, toRefs, defineComponent } from "vue";
 export default defineComponent({
   name: "App",
   setup() {
-    const data = reactive({})
-    const refData = toRefs(data)
-    const router = useRouter()
+    const data = reactive({});
+    const refData = toRefs(data);
+    const router = useRouter();
 
     function gotoNewVue3() {
-      router.push("/todoList")
+      router.push("/todoList");
     }
 
     const goToloadingn = () => {
-      router.push("/loading")
-    }
+      router.push("/loading");
+    };
     const gotoSortTag = () => {
-      router.push("/sorttag")
-    }
+      router.push("/sorttag");
+    };
 
     const gotoNumber = () => {
-      router.push("/number")
-    }
+      router.push("/number");
+    };
     const gotoPullList = () => {
-      router.push("/pullList")
-    }
+      router.push("/pullList");
+    };
     return {
       ...refData,
       gotoNewVue3,
@@ -48,9 +46,9 @@ export default defineComponent({
       gotoSortTag,
       gotoNumber,
       gotoPullList,
-    }
+    };
   },
-})
+});
 </script>
 
 <style scoped>
