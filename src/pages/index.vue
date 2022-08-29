@@ -8,6 +8,7 @@
       <button @click="gotoNumber">animationNumberPage</button>
       <button @click="gotoPullList">pullListPage</button>
       <button @click="gotoVirtualList">virtualList</button>
+      <button @click="gotoDropDown">DropDown</button>
     </div>
   </div>
 </template>
@@ -33,6 +34,10 @@ const gotoPullList = () => {
 
 const gotoVirtualList = () => {
   router.push('/virtualList')
+}
+
+const gotoDropDown = () => {
+  router.push('/dropDown')
 }
 </script>
 <script lang="ts">

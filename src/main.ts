@@ -32,6 +32,10 @@ const router = createRouter({
       path: '/virtualList',
       component: () => import('./pages/virtualList.vue'),
     },
+    {
+      path: '/dropDown',
+      component: () => import('./pages/dropDown.vue'),
+    },
   ],
 })
 

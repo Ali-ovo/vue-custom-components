@@ -1,25 +1,15 @@
 <template>
   <div class="sort">
-    <sort-tag
-      text="排序"
-      :resetValue="resetValue1"
-      @click="click"
-      :order="order1"
-    ></sort-tag>
-    <sort-tag
-      text="排序2"
-      :resetValue="resetValue2"
-      @click="click2"
-      :order="order2"
-    ></sort-tag>
+    <sort-tag text="排序" :resetValue="resetValue1" @click="click" :order="order1"></sort-tag>
+    <sort-tag text="排序2" :resetValue="resetValue2" @click="click2" :order="order2"></sort-tag>
   </div>
 </template>
 
 <script lang="ts">
-import { reactive, ref, defineComponent } from "vue"
-import sortTag from "../components/sortTag/sort-tag.vue"
+import { ref, defineComponent } from 'vue'
+import sortTag from '../components/sortTag/sort-tag.vue'
 export default defineComponent({
-  name: "sortTagPage",
+  name: 'sortTagPage',
   components: { sortTag },
   setup() {
     // 随机值 根据这个可以重置当前状态
@@ -27,8 +17,8 @@ export default defineComponent({
     const resetValue2 = ref(0)
 
     // 存储当前的排序状态
-    const order1 = ref("")
-    const order2 = ref("")
+    const order1 = ref('')
+    const order2 = ref('')
 
     // 点击事件 返回排序的字段
     const click = (e: any) => {
@@ -46,6 +36,8 @@ export default defineComponent({
       resetValue2,
       click,
       click2,
+      order1,
+      order2,
     }
   },
 })
